@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Internship",
+        "Part Time",
+        "Full Time",
+        "Full Time Hybrid",
+        "Full Time Remote",
+        "Project Basis"
+      ],
+      "required": true
+    },
+    "expertise": {
+      "type": "enumeration",
+      "enum": [
+        "Beginner Level",
+        "Intermediate Level",
+        "Expert Level"
+      ],
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Platform Solutions",
+        "Business",
+        "Studio",
+        "Experience",
+        "Finance",
+        "People & Culture",
+        "Project Management"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "Requirements": {
+      "type": "richtext",
+      "required": true
+    },
+    "applicants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "job"
+    }
+  }
+}

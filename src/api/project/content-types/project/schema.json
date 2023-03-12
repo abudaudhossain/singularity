@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Software",
+        "Studio",
+        "Experience"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Web Services",
+        "Mobile Development",
+        "Online Self-Banking",
+        "Trade Marketing Automation",
+        "Online News Agency",
+        "E-Commerce Platform",
+        "Corporate Video",
+        "Explainer Video",
+        "Character Animation",
+        "Visual Effects",
+        "TVC & DVC",
+        "Digital Post",
+        "Augmented Reality",
+        "Virtual Reality",
+        "Mixed Reality",
+        "Game Development",
+        "Interactive Holography",
+        "MR Portal"
+      ],
+      "required": true
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "caseTitle": {
+      "type": "string",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text",
+      "required": true
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "storyTitle": {
+      "type": "string",
+      "required": true
+    },
+    "story": {
+      "type": "text",
+      "required": true
+    },
+    "additionalImages": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "services": {
+      "type": "customField",
+      "options": [
+        "Web Services",
+        "Mobile Development",
+        "Online Self-Banking",
+        "Trade Marketing Automation",
+        "Online New Agency",
+        "E-Commerce Platform",
+        "Corporate Video",
+        "Explainer Video",
+        "Character Animation",
+        "Visual Effects",
+        "TVC & DVC",
+        "Digital Post",
+        "Augmented Reality",
+        "Virtual Reality",
+        "Mixed Reality",
+        "Game Development",
+        "Interactive Holography",
+        "MR Portal"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "takewayTitle": {
+      "type": "string"
+    },
+    "takewayDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
